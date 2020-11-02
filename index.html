@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    label{
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Zeichenkettentrennungsapp</h1>
+        <form action="javascript:work();">
+           
+            <label for="feld1" class="feld1">Zu trennende Zeichenkette</label>
+            <input id="my-input1" class="form-control col-xs-8" type="text" name="feld1">
+
+
+            <label for="feld2" class="feld2">Zeichenkette für die Trennungspsoition</label>
+            <input id="my-input2" class="form-control col-xs-8" type="text" name="feld2">
+
+
+            
+            <input type="radio" name="trennenungMethode" id="trennenung1" value="davor trennen" >
+            <label for="trennenung1">davor trennen</label><br>
+            <input type="radio" name="trennenungMethode" id="trennenung2" value="danach trennen"checked>
+            <label for="trennenung2">danach trennen</label><br>
+            <input type="button" value="Trennen" onclick="trennen()">
+        </form>
+        
+    </div>
+    <h3 class="container">Ausgabe</h3>
+    <div class="container vorHinter">
+        <div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12"> 
+                <p class="lead mb-0">Vorderer teil</p>
+                <div id="vordererTeil"></div></div>
+             
+                <div class="col-md-6 col-sm-12"> 
+                <p class="lead mb-0">Hinterer teil</p>
+                <div id="hintererTeil" ></div>
+                </div>
+            </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
